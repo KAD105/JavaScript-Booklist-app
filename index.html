@@ -1,91 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://kit.fontawesome.com/e5098e94fe.js" crossorigin="anonymous"></script>
-    <title>outfit-shop</title>
-</head>
-<body>
-
-    <div class="container mt-4">
-        <h1 class="display-4 text-center">
-            <i class="fas fa-tshirt text-primary"></i>
-             Your <span class="text-primary"> Best</span> Outfit</h1>
-
-             <form>
-                <input type="text" class="input" placeholder="What's your favorite shirt?" required/>
-                <button class="outfit-btn" type="submit">
-                  <i class="fas fa-plus-square"></i>
-                </button>
-                <div class="select">
-                  <select name="outfit-color" class="filter-color">
-                    <option value="red">Red</option>
-                    <option value="white">White</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="black">Black</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="purple">Purple</option>
-                  </select>
-                </div>
-            </form>
-            
-            <form>
-                <input type="text" class="input" placeholder="What's your favorite trousers?" required/>
-                <button class="outfit-btn" type="submit">
-                  <i class="fas fa-plus-square"></i>
-                </button>
-                <div class="select">
-                  <select name="outfit-colo" class="filter-color">
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="black">Black</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="purple">Purple</option>
-                  </select>
-                </div>
-            </form>
-            
-            <form>
-                <input type="text" class="input" placeholder="What's your favorite shoes?" required/>
-                <button class="outfit-btn" type="submit">
-                  <i class="fas fa-plus-square"></i>
-                </button>
-                <div class="select">
-                  <select name="outfit-colo" class="filter-color">
-                    <option value="blue">Blue</option>
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="black">Black</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="purple">Purple</option>
-                  </select>
-                </div>
-            </form>
-            
-
-        <table class="table table-striped mt-5">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>ISBN#</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="book-list"></tbody>
-        
-        </table>
-
+<div class="container mt-4">
+  <h1 class="display-4 text-center">
+    <i class="fas fa-book-open text-primary"></i> My<span class="text-primary"
+      >Book</span
+    >List
+  </h1>
+  <form id="book-form">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" class="form-control" />
     </div>
-
-    <script src="app.js"></script>
-</body>
-</html> 
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" id="author" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="isbn">ISBN#</label>
+      <input type="text" id="isbn" class="form-control" />
+    </div>
+    <input type="submit" value="Add Book" class="btn btn-primary btn-block" />
+  </form>
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN#</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="book-list"></tbody>
+  </table>
+</div>
